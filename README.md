@@ -5,80 +5,86 @@
 <h1 align="center">Kanban por proyectos</h1>
 
 <p align="center">
-  Aplicación web para organizar el trabajo de un equipo en <strong>tableros kanban por proyecto</strong>, con plantillas de tareas, editor de texto enriquecido, un chat de notas para cada proyecto y la interfaz en <strong>tres idiomas</strong>.<br>
-  Hecha con <strong>PHP y JavaScript, sin frameworks y sin base de datos</strong>.
+  <strong>English</strong> · <a href="README.es.md">Español</a>
+</p>
+
+<p align="center">
+  A web app for organizing a team's work on <strong>per-project kanban boards</strong>, with task templates, a rich-text editor, a notes chat for each project and a user interface in <strong>three languages</strong>.<br>
+  Built with <strong>PHP and JavaScript, with no backend framework and no database</strong>.
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/PHP-7.4%20%7C%208.x-777BB4?logo=php&logoColor=white" alt="PHP 7.4 | 8.x">
-  <img src="https://img.shields.io/badge/JavaScript-jQuery-0769AD?logo=jquery&logoColor=white" alt="JavaScript y jQuery">
+  <img src="https://img.shields.io/badge/JavaScript-jQuery-0769AD?logo=jquery&logoColor=white" alt="JavaScript and jQuery">
   <img src="https://img.shields.io/badge/Bootstrap-3-7952B3?logo=bootstrap&logoColor=white" alt="Bootstrap 3">
-  <img src="https://img.shields.io/badge/datos-JSON-555555" alt="Datos en JSON">
-  <img src="https://img.shields.io/badge/idiomas-es%20%7C%20en%20%7C%20fr-2c3e50" alt="Español, inglés y francés">
+  <img src="https://img.shields.io/badge/data-JSON-555555" alt="Data in JSON">
+  <img src="https://img.shields.io/badge/languages-es%20%7C%20en%20%7C%20fr-2c3e50" alt="Spanish, English and French">
 </p>
 
 <p align="center">
-  <img src="capturas/demo-arrastrar.gif" alt="Arrastrando tareas entre columnas del tablero" width="900">
+  <img src="capturas/demo-arrastrar.gif" alt="Dragging tasks between board columns" width="900">
 </p>
 
 ---
 
-## Índice
+## Contents
 
-- [Qué es](#qué-es)
-- [Funcionalidades](#funcionalidades)
-- [Pruébalo en un minuto](#pruébalo-en-un-minuto)
-- [Cómo funciona por dentro](#cómo-funciona-por-dentro)
-- [Estructura del proyecto](#estructura-del-proyecto)
-- [Lo que aprendí y lo que haría hoy](#lo-que-aprendí-y-lo-que-haría-hoy)
-- [Contexto](#contexto)
-- [Créditos](#créditos)
+- [What it is](#what-it-is)
+- [Features](#features)
+- [Try it in one minute](#try-it-in-one-minute)
+- [How it works](#how-it-works)
+- [Project structure](#project-structure)
+- [What I learned and what I would do today](#what-i-learned-and-what-i-would-do-today)
+- [Background](#background)
+- [Credits](#credits)
 
-## Qué es
+## What it is
 
-Cada proyecto tiene su propio tablero de cuatro columnas, con los nombres que tú elijas («Pendiente → Diseño → Desarrollo → Publicado», «Nueva → URGENTE → En proceso → Finalizado»…), y su propio bloc de notas compartido. Las tareas se crean desde plantillas, se escriben con formato y se mueven arrastrándolas. Todo se guarda al momento, sin recargar la página.
+Each project has its own four-column board with the column names you choose ("Pendiente → Diseño → Desarrollo → Publicado", "Nueva → URGENTE → En proceso → Finalizado"…) and its own shared notepad. Tasks are created from templates, written with formatting and moved by dragging them. When you move or delete a task, the change is saved immediately without reloading the page.
 
-Es una aplicación completa, de la interfaz al almacenamiento: **PHP** en el servidor, **JavaScript y jQuery** en el navegador, y los datos en ficheros **JSON y HTML** con un formato propio.
+It is a complete application, from the interface to storage: **PHP** on the server, **JavaScript and jQuery** in the browser, and the data in **JSON and HTML** files with a custom format.
 
-## Funcionalidades
+> The app's default language, the sample data and the code comments are in Spanish, because I built it during an internship in Spain. The interface can be switched to English or French with one click.
 
-### 🗂️ Gestión de proyectos
-- Crear proyectos con nombre, descripción y **cuatro columnas personalizadas**.
-- Editar proyectos y marcar uno como **proyecto por defecto**, que es el que se abre al entrar.
-- **Deshabilitar sin borrar**: el proyecto desaparece de la lista principal, pero se conservan su tablero y sus notas, y se puede consultar en la vista de todos los proyectos.
+## Features
 
-| Lista de proyectos | Todos los proyectos (activos e inactivos) |
+### 🗂️ Project management
+- Create projects with a name, a description and **four custom columns**.
+- Edit projects and mark one as the **default project**, which is the one that opens when you start the app.
+- **Disable without deleting**: the project disappears from the main list, but its board and notes are kept, and it is still available in the all-projects view.
+
+| Project list | All projects (active and inactive) |
 |---|---|
-| ![Lista de proyectos](capturas/proyectos.png) | ![Todos los proyectos](capturas/todos-los-proyectos.png) |
+| ![Project list](capturas/proyectos.png) | ![All projects](capturas/todos-los-proyectos.png) |
 
-### 📋 Tablero kanban
-- **Arrastrar y soltar** tareas entre columnas, o dentro de una misma columna para reordenarlas, con [dragula](https://github.com/bevacqua/dragula). Cada movimiento se guarda por **AJAX**.
-- **Papelera**: suelta una tarea en la esquina superior derecha para borrarla.
-- Cada tarjeta muestra título, fecha de creación y descripción. Los guiones (`-`) de la descripción se convierten en párrafos.
+### 📋 Kanban board
+- **Drag and drop** tasks between columns, or within the same column to reorder them, using [dragula](https://github.com/bevacqua/dragula). Every move is saved over **AJAX**.
+- **Trash area**: drop a task in the top right corner to delete it.
+- Each card shows the title, the creation date and the description. Dashes (`-`) in the description become separate paragraphs.
 
-![Tablero de un proyecto](capturas/tablero.png)
+![A project's board](capturas/tablero.png)
 
-### ✍️ Tareas con plantillas y texto enriquecido
-- El editor **[Quill](https://quilljs.com/)** permite negrita, cursiva, subrayado, tachado, subíndice y superíndice, listas y sangrías.
-- **Plantillas** reutilizables: «Incidencia», «Reunión», «Mejora»… Se definen en `json/plantillas.json` y se cargan en el editor con un clic.
+### ✍️ Tasks with templates and rich text
+- The **[Quill](https://quilljs.com/)** editor supports bold, italic, underline, strikethrough, subscript and superscript, lists and indentation.
+- Reusable **templates** such as "Incidencia" (issue), "Reunión" (meeting) and "Mejora" (improvement). They are defined in `json/plantillas.json` and load into the editor with one click.
 
-![Nueva tarea con plantilla](capturas/nueva-tarea.png)
+![New task from a template](capturas/nueva-tarea.png)
 
-### 💬 Chat de notas por proyecto
-- Cada proyecto tiene su propio canal de notas, que **se actualiza solo cada 2,5 segundos**.
-- Las notas se pueden **copiar al portapapeles** o **borrar** con un clic.
+### 💬 Notes chat for each project
+- Each project has its own notes channel, which **refreshes automatically every 2.5 seconds**.
+- Notes can be **copied to the clipboard** or **deleted** with one click.
 
-![Chat de anotaciones](capturas/chat.png)
+![Notes chat](capturas/chat.png)
 
-### 🌍 Interfaz en tres idiomas
-- Español, inglés y francés, con un clic en las banderas.
-- Los textos están en `idiomas/*.json`. Para añadir otro idioma basta con un fichero nuevo, sin tocar código.
+### 🌍 Interface in three languages
+- Spanish, English and French, switched by clicking the flags.
+- The texts live in `idiomas/*.json`. Adding another language only takes a new file, with no code changes.
 
-![Formulario en inglés](capturas/crear-proyecto-en.png)
+![Form in English](capturas/crear-proyecto-en.png)
 
-## Pruébalo en un minuto
+## Try it in one minute
 
-Necesitas **PHP 7.4 o superior** (probado con PHP 8.3) y conexión a internet, porque algunas librerías se cargan desde CDN.
+You need **PHP 7.4 or later** (tested with PHP 8.3) and an internet connection, because some libraries are loaded from a CDN.
 
 ```bash
 git clone https://github.com/RafaelAMunozDev/kanban-proyectos.git
@@ -86,77 +92,77 @@ cd kanban-proyectos
 php -S localhost:8000
 ```
 
-Abre <http://localhost:8000>.
+Open <http://localhost:8000>.
 
-¿No tienes PHP? Con **Docker** funciona igual:
+No PHP? It works the same with **Docker**:
 
 ```bash
 docker run --rm -p 8000:8000 -v "$PWD":/app -w /app php:8.3-cli php -S 0.0.0.0:8000
 ```
 
-> En Windows puedes instalar PHP con `winget install PHP.PHP.8.3`.
+> On Windows you can install PHP with `winget install PHP.PHP.8.3`.
 
-El repositorio trae **tres proyectos de ejemplo con datos inventados**: «General», «Web Tienda» e «Inventario», este último deshabilitado. La aplicación escribe en `json/` y `chat/chats/`, así que esas carpetas necesitan permisos de escritura. Para volver a los datos de ejemplo después de probar:
+The repository includes **three sample projects with made-up data**: "General", "Web Tienda" and "Inventario" (the last one disabled). The app writes to `json/` and `chat/chats/`, so those folders need write permissions. To go back to the sample data after trying it:
 
 ```bash
 git checkout -- json chat/chats && git clean -f json chat/chats
 ```
 
-## Cómo funciona por dentro
+## How it works
 
-### Arquitectura
+### Architecture
 
-No hay framework ni base de datos. Cada pantalla es una **vista** dentro de `index.php` o `kanban.php`, y se elige con el parámetro `?status=` de la URL. El navegador lee los ficheros de datos directamente y PHP se encarga de escribirlos.
+There is no backend framework and no database; Bootstrap and Bulma are only used for styling. Each screen is a **view** inside `index.php` or `kanban.php`, selected with the `?status=` URL parameter. The browser reads the data files directly and PHP takes care of writing them.
 
 ```mermaid
 flowchart LR
-    N["Navegador<br/>(jQuery · dragula · Quill)"]
+    N["Browser<br/>(jQuery · dragula · Quill)"]
 
-    subgraph S["Servidor PHP"]
-        I["index.php<br/>10 vistas: proyectos, tablero,<br/>crear, editar, idioma…"]
-        K["kanban.php<br/>añadir, editar, mover<br/>y borrar tareas"]
+    subgraph S["PHP server"]
+        I["index.php<br/>10 views: projects, board,<br/>create, edit, language…"]
+        K["kanban.php<br/>add, edit, move<br/>and delete tasks"]
         C["chat/index.php<br/>chat/post.php"]
     end
 
-    subgraph D["Datos"]
+    subgraph D["Data"]
         P[("json/proyectos.json")]
         PL[("json/plantillas.json")]
-        T[("json/{id}.json<br/>un tablero por proyecto")]
-        H[("chat/chats/{id}.html<br/>notas por proyecto")]
+        T[("json/{id}.json<br/>one board per project")]
+        H[("chat/chats/{id}.html<br/>notes per project")]
     end
 
     N -- "?status=1…10" --> I
-    N -- "AJAX y formularios" --> K
-    N -- "enviar / borrar nota" --> C
-    I -- "lee y escribe" --> P
-    K -- "lee" --> PL
-    K -- "lee y escribe" --> T
-    C -- "añade y borra" --> H
-    N -. "lee el tablero (getJSON)" .-> T
-    N -. "refresca cada 2,5 s" .-> H
+    N -- "AJAX and forms" --> K
+    N -- "send / delete note" --> C
+    I -- "reads and writes" --> P
+    K -- "reads" --> PL
+    K -- "reads and writes" --> T
+    C -- "appends and deletes" --> H
+    N -. "reads the board (getJSON)" .-> T
+    N -. "refreshes every 2.5 s" .-> H
 ```
 
-Todas las vistas cargan sus textos de `idiomas/<idioma>.json` según el idioma guardado en la sesión.
+Every view loads its texts from `idiomas/<language>.json`, based on the language stored in the session.
 
-### Qué pasa al arrastrar una tarea
+### What happens when you drag a task
 
 ```mermaid
 sequenceDiagram
-    actor U as Usuario
+    actor U as User
     participant JS as kanban.js (dragula)
     participant PHP as kanban.php
-    participant F as Tablero (JSON)
+    participant F as Board (JSON)
 
-    U->>JS: Suelta la tarjeta en otra columna
-    JS->>PHP: POST moveitem (id, columna origen, columna destino, nuevo orden)
-    PHP->>F: Reescribe la columna destino en el nuevo orden y quita la tarea de la de origen
-    JS->>F: Vuelve a leer el tablero
-    JS-->>U: Repinta las cuatro columnas
+    U->>JS: Drops the card in another column
+    JS->>PHP: POST moveitem (id, source column, target column, new order)
+    PHP->>F: Rewrites the target column in the new order and removes the task from the source
+    JS->>F: Reads the board again
+    JS-->>U: Redraws the four columns
 ```
 
-### Modelo de datos
+### Data model
 
-**Proyectos** (`json/proyectos.json`). Cada proyecto apunta a su tablero y a su fichero de notas. Las cuatro columnas se guardan en un único texto separado por `#`:
+**Projects** (`json/proyectos.json`). Each project points to its board and its notes file. The four columns are stored as a single string separated by `#`:
 
 ```json
 {
@@ -171,7 +177,7 @@ sequenceDiagram
 }
 ```
 
-**Tablero** (`json/<id>.json`). Las columnas 1 a 4 corresponden a las claves `idea`, `todo`, `deliver` y `review`:
+**Board** (`json/<id>.json`). Columns 1 to 4 map to the keys `idea`, `todo`, `deliver` and `review`:
 
 ```json
 {
@@ -182,81 +188,70 @@ sequenceDiagram
 }
 ```
 
-**Notas** (`chat/chats/<id>.html`). Cada nota es un fragmento HTML con su fecha y sus botones de copiar y borrar. `post.php` añade notas al final del fichero y borra la línea que contiene el id de la nota.
+**Notes** (`chat/chats/<id>.html`). Each note is an HTML fragment with its date and its copy and delete buttons. `post.php` appends notes to the end of the file and deletes the line that contains the note's id.
 
-**Idioma**: se guarda en la sesión de PHP, y cada vista carga los textos de `idiomas/<idioma>.json`.
+**Language**: stored in the PHP session; each view loads its texts from `idiomas/<language>.json`.
 
-## Estructura del proyecto
+## Project structure
 
 ```
-├── index.php            Vistas de proyectos y tablero (?status=1…10)
-├── kanban.php           Tareas: formularios y acciones AJAX (?status=1…5)
-├── kanban.js            Tablero en el navegador: dragula, ids, fechas y llamadas AJAX
+├── index.php            Project and board views (?status=1…10)
+├── kanban.php           Tasks: forms and AJAX actions (?status=1…5)
+├── kanban.js            Board in the browser: dragula, ids, dates and AJAX calls
 ├── json/
-│   ├── proyectos.json   Lista de proyectos
-│   ├── plantillas.json  Plantillas de tareas
-│   └── <id>.json        Un tablero por proyecto
+│   ├── proyectos.json   Project list
+│   ├── plantillas.json  Task templates
+│   └── <id>.json        One board per project
 ├── chat/
-│   ├── index.php        Pantalla de notas (se refresca cada 2,5 s)
-│   ├── post.php         Enviar y borrar notas
-│   └── chats/<id>.html  Notas de cada proyecto
+│   ├── index.php        Notes screen (refreshes every 2.5 s)
+│   ├── post.php         Send and delete notes
+│   └── chats/<id>.html  Notes for each project
 ├── idiomas/             es.json · en.json · fr.json
 ├── css/                 kanban.css + Bootstrap 3
-├── images/              Iconos, logo y banderas
-├── quilljs-textarea-master/   Integración de Quill con <textarea>
-└── capturas/            Imágenes de este README
+├── images/              Icons, logo and flags
+├── quilljs-textarea-master/   Quill integration with <textarea>
+└── capturas/            Images used in this README
 ```
 
-## Lo que aprendí y lo que haría hoy
+## What I learned and what I would do today
 
-Con este proyecto aprendí a construir una aplicación web completa desde cero:
-- separar lo que hace el servidor de lo que hace el navegador;
-- guardar datos sin base de datos;
-- comunicar ambas partes por AJAX;
-- integrar librerías de terceros (dragula, Quill y un chat de código abierto) adaptándolas a lo que necesitaba;
-- preparar una interfaz para varios idiomas.
+With this project I learned to build a complete web application from scratch:
+- separating what the server does from what the browser does;
+- storing data without a database;
+- connecting both sides with AJAX;
+- integrating third-party libraries (dragula, Quill and an open-source chat) and adapting them to what I needed;
+- preparing an interface for several languages.
 
-Si lo hiciera hoy, cambiaría sobre todo esto:
+If I built it today, these are the main things I would change:
 
-- **Base de datos** (por ejemplo SQLite) en lugar de reescribir ficheros JSON completos. Así se evitan pérdidas si dos personas guardan a la vez.
-- **Seguridad**: escapar todo lo que se muestra (`htmlspecialchars`), validar las entradas, añadir protección CSRF y usuarios con contraseña. Ahora mismo **no está pensado para exponerse a internet**.
-- **No pasar datos por la URL**: al editar una tarea, la descripción viaja en la URL. Hoy la pediría al servidor por su id.
-- **Separar vistas y lógica**: en lugar de un `index.php` con diez vistas, una plantilla por pantalla y un pequeño enrutador.
-- **JavaScript moderno**: `fetch` en vez de jQuery, y repintar solo la tarjeta que cambia en vez de todo el tablero.
+- **A database** (SQLite, for example) instead of rewriting whole JSON files. That avoids losing data when two people save at the same time.
+- **Security**: escape everything that is displayed (`htmlspecialchars`), validate input, add CSRF protection and user accounts with passwords. Right now it is **not meant to be exposed to the internet**.
+- **No data in the URL**: when editing a task, its description travels in the URL. Today I would load it from the server by its id.
+- **Separate views and logic**: instead of one `index.php` with ten views, one template per screen and a small router.
+- **Modern JavaScript**: `fetch` instead of jQuery, and redrawing only the card that changes instead of the whole board.
 
-## Contexto
+## Background
 
-Hice este proyecto en 2023, durante mis prácticas del ciclo de SMR (Sistemas Microinformáticos y Redes), y lo programé sin ayuda de IA.
+I built this project in 2023, during the internship of my SMR vocational training (Sistemas Microinformáticos y Redes, a Spanish IT qualification), and I wrote it without AI help.
 
-Lo publico prácticamente tal como estaba, porque refleja cómo programaba entonces. Para subirlo solo he hecho lo mínimo:
+I am publishing it almost exactly as it was, because it shows how I programmed back then. To upload it I only made minimal changes:
 
-- He quitado las referencias a la empresa donde hice las prácticas.
-- He sustituido los datos reales por datos de ejemplo inventados.
-- He borrado archivos de librerías que no se usaban.
-- He pasado al español algunos comentarios que estaban en inglés.
-- He traducido cuatro textos que se habían quedado fijos en español y he corregido la pista de las columnas, que decía «separadas por comas» cuando se separan con `#`.
-- He corregido el enlace al chat (`./chat` → `./chat/`). Sin la barra final, con `php -S` el chat se quedaba sin estilos y no podía enviar notas.
-- He corregido cuatro detalles que impedían que funcionara en PHP 8:
-  - claves de array sin comillas;
-  - una coma sobrante en `idiomas/en.json`;
-  - un `session_start()` en el chat que iba después de enviar HTML;
-  - un `header()` en `kanban.php` que también iba después de enviar HTML.
+- I removed the references to the company where I did the internship.
+- I replaced the real data with made-up sample data.
+- I deleted library files that were not used.
+- I translated into Spanish a few code comments that were in English.
+- I translated four texts that were hard-coded in Spanish and fixed the columns hint, which said "separated by commas" when they are separated with `#`.
+- I fixed the link to the chat (`./chat` → `./chat/`). Without the trailing slash, under `php -S` the chat loaded without styles and could not send notes.
+- I fixed four details that stopped it from working on PHP 8:
+  - unquoted array keys;
+  - a trailing comma in `idiomas/en.json`;
+  - a `session_start()` in the chat that came after HTML had been sent;
+  - a `header()` in `kanban.php` that also came after HTML had been sent.
 
-## Créditos
+## Credits
 
-- **`chat/`** es una adaptación de [minchat](https://github.com/YunoHost-Apps/minchat_ynh) (licencia MIT, © 2015 Chtixof). Minchat, a su vez, se basa en [wojtek77/chat](https://github.com/wojtek77/chat) y en un tutorial de Tuts+. Su licencia está en [`chat/LICENSE`](chat/LICENSE).
-- **[Quill](https://quilljs.com/)** es una librería de terceros (licencia BSD-3-Clause). Se carga desde su CDN; `quilljs-textarea-master/quill.snow.css` es su hoja de estilos.
-- **[quilljs-textarea](https://github.com/tangien/quilljs-textarea)** es una librería de terceros (licencia MIT, © 2019 Dinesh Kumar). Está en `quilljs-textarea-master/`, con su licencia en [`quilljs-textarea-master/LICENSE`](quilljs-textarea-master/LICENSE).
-- Otras librerías de terceros: [Bootstrap 3.3.5](https://getbootstrap.com/) (MIT, incluida en `css/bootstrap.css`), [Bulma](https://bulma.io/) (MIT), [jQuery](https://jquery.com/) (MIT), [dragula](https://github.com/bevacqua/dragula) (MIT) y [Font Awesome 4](https://fontawesome.com/v4/). Todas salvo Bootstrap se cargan desde CDN.
-- Las banderas de `images/` son de [flag-icons](https://github.com/lipis/flag-icons) (MIT).
-
----
-
-<details>
-<summary><strong>🇬🇧 English summary</strong></summary>
-
-**Kanban por proyectos** is a project-based kanban board built with plain **PHP and JavaScript, with no framework and no database**. Each project gets its own four-column board with custom column names and its own notes chat. Tasks are created from templates, written with a rich-text editor (Quill), and moved by drag and drop (dragula); every change is saved over AJAX. The UI is available in Spanish, English and French. Data is stored in JSON and HTML files.
-
-I built it in 2023 during my vocational IT internship (SMR), and it is published almost as it was then. Run it with `php -S localhost:8000`.
-
-</details>
+- **`chat/`** is an adaptation of [minchat](https://github.com/YunoHost-Apps/minchat_ynh) (MIT license, © 2015 Chtixof). Minchat is in turn based on [wojtek77/chat](https://github.com/wojtek77/chat) and a Tuts+ tutorial. Its license is in [`chat/LICENSE`](chat/LICENSE).
+- **[Quill](https://quilljs.com/)** is a third-party library (BSD-3-Clause license). It is loaded from its CDN; `quilljs-textarea-master/quill.snow.css` is its stylesheet.
+- **[quilljs-textarea](https://github.com/tangien/quilljs-textarea)** is a third-party library (MIT license, © 2019 Dinesh Kumar). It lives in `quilljs-textarea-master/`, with its license in [`quilljs-textarea-master/LICENSE`](quilljs-textarea-master/LICENSE).
+- Other third-party libraries: [Bootstrap 3.3.5](https://getbootstrap.com/) (MIT, included in `css/bootstrap.css`), [Bulma](https://bulma.io/) (MIT), [jQuery](https://jquery.com/) (MIT), [dragula](https://github.com/bevacqua/dragula) (MIT) and [Font Awesome 4](https://fontawesome.com/v4/). All of them except Bootstrap are loaded from a CDN.
+- The flags in `images/` come from [flag-icons](https://github.com/lipis/flag-icons) (MIT).
