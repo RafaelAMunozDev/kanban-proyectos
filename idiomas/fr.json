@@ -1,0 +1,84 @@
+{
+	"config": "Francés",
+	"vista1":{
+		"seleccion_proyecto":"Sélectionner le projet: ",
+		"nohayproyectosactivos":"Pas de projet actif",
+		"crearproyecto":"Créer un projet",
+		"visualizartodoslosproyectos":"Voir tous les projets",
+		"editar":"Modifier"
+	},
+	"vista2":{
+		"descripcion":"Description: ",
+		"volver":"Retour à",
+		"editar":"Editer",
+		"notas":"Notes",
+		"arrastraeliminar":"Glisser ici pour supprimer"
+	},
+	"vista3":{
+		"crearproyecto":"Créer un projet",
+		"proyecto":"Projet: ",
+		"placeproyecto":"Écrire le nom",
+		"descripcion":"Brève description: ",
+		"placedescripcion":"Écrire le description",
+		"columnas":"Colonnes: ",
+		"placecolumnas":"( 4 min/max et séparés par # )",
+		"pordefecto":"¿Faire défaut?",
+		"volver":"Retour à"
+	},
+	"vista4":{
+		"crearproyectocorrecto":"Le projet a été créé avec succès"
+	},
+	"vista5":{
+		"deshabilitarproyectocorrecto":"Le projet a été désactivé avec succès"
+	},
+	"vista6":{
+		"todoslosproyectos":"Tous les projets:",
+		"habilitado":"Activé",
+		"deshabilitado":"Handicapés",
+		"volver":"Retour à"
+	},
+	"vista8":{
+		"editarproyecto":"Modifier un projet",
+		"proyecto":"Projet: ",
+		"placeproyecto":"Écrire le nom",
+		"descripcion":"Brève description: ",
+		"placedescripcion":"Écrire le description",
+		"columnas":"Colonnes: ",
+		"placecolumnas":"( 4 min/max et séparés par # )",
+		"volver":"Retour à",
+		"deshabilitar":"¿Désactiver?",
+		"confirmardelete":"Voulez-vous désactiver ce projet ?",
+		"pordefecto":"¿Faire défaut?",
+		"cancelardelete":"Annulé, vous serez redirigé vers la page principale"
+	},
+	"vista9":{
+		"editarproyectocorrecto":"Le projet a été édité avec succès"
+	},
+	"indexv2":{
+		"editartabla":"Modifier le tableau",
+		"titulo":"Titre: ",
+		"placetitulo":"Écrire le titre",
+		"descripcion":"Description: ",
+		"editar":"Editer",
+		"volver":"Retour à"
+	},
+	"indexv4":{
+		"crear":"Ajouter une table",
+		"titulo":"Titre: ",
+		"placetitulo":"Écrire le titre",
+		"descripcion":"Description: ",
+		"crear2":"Ajouter",
+		"volver":"Retour à",
+		"plantillas":"Modèles:",
+		"seleccionaplantilla":"-Sélectionnez un modèle-"
+	},
+	"chat":{
+		"notas":"Notes",
+		"salir":"Sortie vers Kanban",
+		"enviar":"Envoyer",
+		"eliminar":"Supprimer",
+		"copiar":"Copie",
+		"eliminadocorrectamente":"Supprimé avec succès",
+		"volver":"Retour à"
+	}
+}

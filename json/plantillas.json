@@ -1,0 +1,8 @@
+{
+	"plantillas":
+		[
+			{"nombre":"Incidencia","texto":"Qué ocurre: - Desde cuándo: - Equipo afectado: "},
+			{"nombre":"Reunión","texto":"Fecha: - Asistentes: - Temas a tratar: "},
+			{"nombre":"Mejora","texto":"Qué se quiere mejorar: - Por qué: - Prioridad: "}
+		]
+}

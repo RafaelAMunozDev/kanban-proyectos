@@ -1,0 +1,84 @@
+{
+	"config": "Español",
+	"vista1":{
+		"seleccion_proyecto":"Selecciona el proyecto: ",
+		"nohayproyectosactivos":"No hay proyectos activos",
+		"crearproyecto":"Crear Proyecto",
+		"visualizartodoslosproyectos":"Visualizar todos los proyectos",
+		"editar":"Editar"
+	},
+	"vista2":{
+		"descripcion":"Descripción: ",
+		"volver":"Volver",
+		"editar":"Editar",
+		"notas":"Notas",
+		"arrastraeliminar":"Arrastra para eliminar"
+	},
+	"vista3":{
+		"crearproyecto":"Crear Proyecto",
+		"proyecto":"Proyecto: ",
+		"placeproyecto":"Digite el nombre",
+		"descripcion":"Descripción corta: ",
+		"placedescripcion":"Digite la descripcion",
+		"columnas":"Columnas: ",
+		"placecolumnas":"( 4 min/max y separadas por # )",
+		"pordefecto":"¿Por defecto?",
+		"volver":"Volver"
+	},
+	"vista4":{
+		"crearproyectocorrecto":"El proyecto se ha creado correctamente"
+	},
+	"vista5":{
+		"deshabilitarproyectocorrecto":"El proyecto se ha deshabilitado correctamente"
+	},
+	"vista6":{
+		"todoslosproyectos":"Todos los proyectos:",
+		"habilitado":"Habilitado",
+		"deshabilitado":"Deshabilitado",
+		"volver":"Volver"
+	},	
+	"vista8":{
+		"editarproyecto":"Editar Proyecto",
+		"proyecto":"Proyecto: ",
+		"placeproyecto":"Digite el nombre",
+		"descripcion":"Descripción corta: ",
+		"placedescripcion":"Digite la descripcion",
+		"columnas":"Columnas: ",
+		"placecolumnas":"( 4 min/max y separadas por # )",
+		"deshabilitar":"Deshabilitar",
+		"confirmardelete":"¿Quieres deshabilitar este proyecto?",
+		"cancelardelete":"Cancelado, será redirigido a la pagina principal",
+		"pordefecto":"¿Por defecto?",
+		"volver":"Volver"
+	},
+	"vista9":{
+		"editarproyectocorrecto":"El proyecto se ha editado correctamente"
+	},
+	"indexv2":{
+		"editartabla":"Editar Tabla",
+		"titulo":"Titulo: ",
+		"placetitulo":"Digite el titulo",
+		"descripcion":"Descripción: ",
+		"editar":"Editar",
+		"volver":"Volver"
+	},
+	"indexv4":{
+		"crear":"Añadir Tabla",
+		"titulo":"Titulo: ",
+		"placetitulo":"Digite el titulo",
+		"descripcion":"Descripción: ",
+		"crear2":"Añadir",
+		"volver":"Volver",
+		"plantillas":"Plantillas:",
+		"seleccionaplantilla":"-Selecciona una plantilla-"
+	},
+	"chat":{
+		"notas":"Notas",
+		"salir":"Volver al Kanban",
+		"enviar":"Enviar",
+		"eliminar":"Eliminar",
+		"copiar":"Copiar",
+		"eliminadocorrectamente":"Eliminado Correctamente"
+	}
+	
+}

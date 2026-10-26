@@ -1,0 +1,84 @@
+{
+	"config":"English",
+	"vista1":{
+		"seleccion_proyecto":"Select the project: ",
+		"nohayproyectosactivos":"There are no active projects",
+		"crearproyecto":"Create Project",
+		"visualizartodoslosproyectos":"View all projects",
+		"editar":"Edit"
+	},
+	"vista2":{
+		"notas":"Notes",
+		"descripcion":"Description: ",
+		"volver":"Back to",
+		"editar":"Edit",
+		"arrastraeliminar":"Drag here to delete"
+	},
+	"vista3":{
+		"crearproyecto":"Create Project",
+		"proyecto":"Project: ",
+		"placeproyecto":"Write the name",
+		"descripcion":"Short description: ",
+		"placedescripcion":"Write the description",
+		"columnas":"Columns: ",
+		"placecolumnas":"( 4 min/max and separated by # )",
+		"pordefecto":"¿Default?",
+		"volver":"Back to"
+	},
+	"vista4":{
+		"crearproyectocorrecto":"The project has been created successfully"
+	},
+	"vista5":{
+		"deshabilitarproyectocorrecto":"The project has been successfully disabled"
+	},
+	"vista6":{
+		"todoslosproyectos":"All projects:",
+		"habilitado":"Enabled",
+		"deshabilitado":"Disabled",
+		"volver":"Back to"
+	},
+	"vista8":{
+		"editarproyecto":"Edit Project",
+		"proyecto":"Project: ",
+		"placeproyecto":"Write the name",
+		"descripcion":"Short description: ",
+		"placedescripcion":"Write the description",
+		"columnas":"Columns: ",
+		"placecolumnas":"( 4 min/max and separated by # )",
+		"pordefecto":"¿Default?",
+		"deshabilitar":"¿Disable?",
+		"cancelardelete":"Canceled, you will be redirected to the main page",
+		"confirmardelete":"Do you want to disable this project?",
+		"volver":"Back to"
+	},
+	"vista9":{
+		"editarproyectocorrecto":"The project has been edited successfully"
+	},
+	"indexv2":{
+		"editartabla":"Edit Table",
+		"titulo":"Title: ",
+		"placetitulo":"Write the title",
+		"descripcion":"Description: ",
+		"editar":"Edit",
+		"volver":"Back to"
+	},
+	"indexv4":{
+		"crear":"Add Table",
+		"titulo":"Title: ",
+		"placetitulo":"Write the title",
+		"descripcion":"Description: ",
+		"crear2":"Add",
+		"volver":"Back to",
+		"plantillas":"Templates:",
+		"seleccionaplantilla":"-Select a template-"
+
+	},
+	"chat":{
+		"notas":"Notes",
+		"salir":"Back To Kanban",
+		"enviar":"Send",
+		"eliminar":"Delete",
+		"copiar":"Copy",
+		"eliminadocorrectamente":"Deleted successfully"
+	}
+}

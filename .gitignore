@@ -1,0 +1,23 @@
+# Sistema operativo
+.DS_Store
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Copias de seguridad y comprimidos
+*.bak
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Logs
+*.log
